@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT</title>
+</head>
+<body>
+<p id="hienthi"></p>
+<script>
+    var  num = 20;
+    var count = 0;
+    var nn = 2;
+    var dk = true;
+
+    //ham kiem tra so nguyen to
+    function a(n){
+        if (n<2){
+            dk = false;
+        }else {
+            for (i=2;i<n;i++) {
+                if (n % i == 0) {
+                    dk = false;
+                    break;
+                }else {
+                    dk = true;
+                }
+            }
+        }
+    }
+    while (count<num){
+        a(nn);
+        if (dk===true){
+            document.getElementById("hienthi").innerText += nn + "\xa0";
+            count++;
+        }
+        nn++;
+    }
+</script>
+</body>
+</html>
